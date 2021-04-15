@@ -12,9 +12,17 @@
   "npmScope": "aws",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "MGVkNTI5NWUtYTNjYi00YzFlLWFhNzctNWQ1NzVhOGE1NDUzfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
@@ -24,7 +32,9 @@
     },
     "aws-console-e2e": {
       "tags": [],
-      "implicitDependencies": ["aws-console"]
+      "implicitDependencies": [
+        "aws-console"
+      ]
     }
   }
 }
