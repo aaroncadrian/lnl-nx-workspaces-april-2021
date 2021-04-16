@@ -12,5 +12,10 @@ module.exports = {
     '<rootDir>/libs/shared/util-routing',
     '<rootDir>/apps/svc-vpcs',
     '<rootDir>/libs/shared/subnets/domain',
+    '<rootDir>/libs/shared/security-groups/feature-shell',
+    '<rootDir>/libs/shared/security-groups/feature-list',
+    '<rootDir>/libs/shared/security-groups/feature-create',
+    '<rootDir>/libs/shared/security-groups/data-access',
+    '<rootDir>/libs/shared/security-groups/domain',
   ],
 };

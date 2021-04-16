@@ -13,8 +13,16 @@ import {
   subnetsReducer,
 } from '@aws/shared/subnets/data-access';
 
+import {
+  SECURITYGROUPS_FEATURE_KEY,
+  securityGroupsReducer,
+} from '@aws/shared/security-groups/data-access';
+
 const store = configureStore({
-  reducer: { [SUBNETS_FEATURE_KEY]: subnetsReducer },
+  reducer: {
+    [SECURITYGROUPS_FEATURE_KEY]: securityGroupsReducer,
+    [SUBNETS_FEATURE_KEY]: subnetsReducer,
+  },
   // Additional middleware can be passed to this array
   middleware: [...getDefaultMiddleware()],
   devTools: process.env.NODE_ENV !== 'production',

@@ -4,7 +4,8 @@
     "secure": false,
     "logLevel": "debug",
     "pathRewrite": {
-      "^/api/vpc/subnets": "/api/subnets"
+      "^/api/vpc/subnets": "/api/subnets",
+      "^/api/vpc/security-groups": "/api/security-groups"
     }
   }
 }

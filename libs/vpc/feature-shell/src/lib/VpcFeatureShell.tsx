@@ -10,6 +10,10 @@ const VpcSubnetsFeatureShell = React.lazy(
   () => import('@aws/vpc/subnets/feature-shell')
 );
 
+const SharedSecurityGroupsFeatureShell = React.lazy(
+  () => import('@aws/shared/security-groups/feature-shell')
+);
+
 const VpcDashboard = React.lazy(() => import('@aws/vpc/feature-dashboard'));
 
 function VpcFeatureShellRoutes() {
@@ -20,6 +24,11 @@ function VpcFeatureShellRoutes() {
       <Route
         path={`${match.path}/subnets`}
         component={VpcSubnetsFeatureShell}
+      />
+
+      <Route
+        path={`${match.path}/security-groups`}
+        component={SharedSecurityGroupsFeatureShell}
       />
 
       <Route path={match.path} component={VpcDashboard} />
@@ -49,6 +58,11 @@ export function VpcFeatureShell() {
               type: 'link',
               text: 'Subnets',
               href: `${match.url}/subnets`,
+            },
+            {
+              type: 'link',
+              text: 'Security Groups',
+              href: `${match.url}/security-groups`,
             },
           ]}
         />

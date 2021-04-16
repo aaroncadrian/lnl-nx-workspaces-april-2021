@@ -1,25 +1,15 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "npmScope": "aws",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "MGVkNTI5NWUtYTNjYi00YzFlLWFhNzctNWQ1NzVhOGE1NDUzfHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -27,80 +17,33 @@
     }
   },
   "projects": {
-    "aws-console": {
-      "tags": [],
-      "implicitDependencies": [
-        "svc-vpcs"
-      ]
-    },
-    "aws-console-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "aws-console"
-      ]
-    },
-    "vpc-feature-shell": {
-      "tags": [
-        "scope:vpc",
-        "type:feature"
-      ]
-    },
-    "vpc-feature-dashboard": {
-      "tags": [
-        "scope:vpc",
-        "type:feature"
-      ]
-    },
-    "vpc-subnets-feature-shell": {
-      "tags": [
-        "scope:vpc",
-        "type:feature"
-      ]
-    },
-    "vpc-subnets-feature-list": {
-      "tags": [
-        "scope:vpc",
-        "type:feature"
-      ]
-    },
-    "vpc-subnets-feature-create": {
-      "tags": [
-        "scope:vpc",
-        "type:feature"
-      ]
-    },
+    "aws-console": { "tags": [], "implicitDependencies": ["svc-vpcs"] },
+    "aws-console-e2e": { "tags": [], "implicitDependencies": ["aws-console"] },
+    "vpc-feature-shell": { "tags": ["scope:vpc", "type:feature"] },
+    "vpc-feature-dashboard": { "tags": ["scope:vpc", "type:feature"] },
+    "vpc-subnets-feature-shell": { "tags": ["scope:vpc", "type:feature"] },
+    "vpc-subnets-feature-list": { "tags": ["scope:vpc", "type:feature"] },
+    "vpc-subnets-feature-create": { "tags": ["scope:vpc", "type:feature"] },
     "shared-subnets-data-access": {
-      "tags": [
-        "scope:shared",
-        "type:data-access"
-      ]
+      "tags": ["scope:shared", "type:data-access"]
     },
-    "shared-ui-services-navbar": {
-      "tags": [
-        "scope:shared",
-        "type:ui"
-      ]
+    "shared-ui-services-navbar": { "tags": ["scope:shared", "type:ui"] },
+    "shared-ui-routing": { "tags": ["scope:shared", "type:ui"] },
+    "shared-util-routing": { "tags": ["scope:shared", "type:util"] },
+    "svc-vpcs": { "tags": [] },
+    "shared-subnets-domain": { "tags": ["scope:shared", "type:domain"] },
+    "shared-security-groups-feature-shell": {
+      "tags": ["scope:shared", "type:feature"]
     },
-    "shared-ui-routing": {
-      "tags": [
-        "scope:shared",
-        "type:ui"
-      ]
+    "shared-security-groups-feature-list": {
+      "tags": ["scope:shared", "type:feature"]
     },
-    "shared-util-routing": {
-      "tags": [
-        "scope:shared",
-        "type:util"
-      ]
+    "shared-security-groups-feature-create": {
+      "tags": ["scope:shared", "type:feature"]
     },
-    "svc-vpcs": {
-      "tags": []
+    "shared-security-groups-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
     },
-    "shared-subnets-domain": {
-      "tags": [
-        "scope:shared",
-        "type:domain"
-      ]
-    }
+    "shared-security-groups-domain": { "tags": ["scope:shared", "type:domain"] }
   }
 }

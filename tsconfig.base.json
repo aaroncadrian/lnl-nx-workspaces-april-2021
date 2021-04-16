@@ -34,7 +34,22 @@
       ],
       "@aws/shared/ui-routing": ["libs/shared/ui-routing/src/index.ts"],
       "@aws/shared/util-routing": ["libs/shared/util-routing/src/index.ts"],
-      "@aws/shared/subnets/domain": ["libs/shared/subnets/domain/src/index.ts"]
+      "@aws/shared/subnets/domain": ["libs/shared/subnets/domain/src/index.ts"],
+      "@aws/shared/security-groups/feature-shell": [
+        "libs/shared/security-groups/feature-shell/src/index.ts"
+      ],
+      "@aws/shared/security-groups/feature-list": [
+        "libs/shared/security-groups/feature-list/src/index.ts"
+      ],
+      "@aws/shared/security-groups/feature-create": [
+        "libs/shared/security-groups/feature-create/src/index.ts"
+      ],
+      "@aws/shared/security-groups/data-access": [
+        "libs/shared/security-groups/data-access/src/index.ts"
+      ],
+      "@aws/shared/security-groups/domain": [
+        "libs/shared/security-groups/domain/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

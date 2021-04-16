@@ -372,6 +372,119 @@
           }
         }
       }
+    },
+    "shared-security-groups-feature-shell": {
+      "root": "libs/shared/security-groups/feature-shell",
+      "sourceRoot": "libs/shared/security-groups/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/security-groups/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/security-groups/feature-shell"],
+          "options": {
+            "jestConfig": "libs/shared/security-groups/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-security-groups-feature-list": {
+      "root": "libs/shared/security-groups/feature-list",
+      "sourceRoot": "libs/shared/security-groups/feature-list/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/security-groups/feature-list/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/security-groups/feature-list"],
+          "options": {
+            "jestConfig": "libs/shared/security-groups/feature-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-security-groups-feature-create": {
+      "root": "libs/shared/security-groups/feature-create",
+      "sourceRoot": "libs/shared/security-groups/feature-create/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/security-groups/feature-create/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/security-groups/feature-create"],
+          "options": {
+            "jestConfig": "libs/shared/security-groups/feature-create/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-security-groups-data-access": {
+      "root": "libs/shared/security-groups/data-access",
+      "sourceRoot": "libs/shared/security-groups/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/security-groups/data-access/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/security-groups/data-access"],
+          "options": {
+            "jestConfig": "libs/shared/security-groups/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-security-groups-domain": {
+      "root": "libs/shared/security-groups/domain",
+      "sourceRoot": "libs/shared/security-groups/domain/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/security-groups/domain/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/security-groups/domain"],
+          "options": {
+            "jestConfig": "libs/shared/security-groups/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
