@@ -49,7 +49,25 @@
       ],
       "@aws/shared/security-groups/domain": [
         "libs/shared/security-groups/domain/src/index.ts"
-      ]
+      ],
+      "@aws/ec2/feature-shell": ["libs/ec2/feature-shell/src/index.ts"],
+      "@aws/ec2/feature-dashboard": ["libs/ec2/feature-dashboard/src/index.ts"],
+      "@aws/ec2/instances/feature-shell": [
+        "libs/ec2/instances/feature-shell/src/index.ts"
+      ],
+      "@aws/ec2/instances/feature-list": [
+        "libs/ec2/instances/feature-list/src/index.ts"
+      ],
+      "@aws/ec2/launch-instance-wizard/feature-shell": [
+        "libs/ec2/launch-instance-wizard/feature-shell/src/index.ts"
+      ],
+      "@aws/ec2/launch-instance-wizard/feature-ami-selection": [
+        "libs/ec2/launch-instance-wizard/feature-ami-selection/src/index.ts"
+      ],
+      "@aws/shared/ec2/data-access-instances": [
+        "libs/shared/ec2/data-access-instances/src/index.ts"
+      ],
+      "@aws/shared/ec2/domain": ["libs/shared/ec2/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

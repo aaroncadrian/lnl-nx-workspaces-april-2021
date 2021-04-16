@@ -18,8 +18,14 @@ import {
   securityGroupsReducer,
 } from '@aws/shared/security-groups/data-access';
 
+import {
+  EC2INSTANCES_FEATURE_KEY,
+  ec2InstancesReducer,
+} from '@aws/shared/ec2/data-access-instances';
+
 const store = configureStore({
   reducer: {
+    [EC2INSTANCES_FEATURE_KEY]: ec2InstancesReducer,
     [SECURITYGROUPS_FEATURE_KEY]: securityGroupsReducer,
     [SUBNETS_FEATURE_KEY]: subnetsReducer,
   },

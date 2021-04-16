@@ -44,6 +44,23 @@
     "shared-security-groups-data-access": {
       "tags": ["scope:shared", "type:data-access"]
     },
-    "shared-security-groups-domain": { "tags": ["scope:shared", "type:domain"] }
+    "shared-security-groups-domain": {
+      "tags": ["scope:shared", "type:domain"]
+    },
+    "ec2-feature-shell": { "tags": ["scope:ec2", "type:feature"] },
+    "ec2-feature-dashboard": { "tags": ["scope:ec2", "type:feature"] },
+    "ec2-instances-feature-shell": { "tags": ["scope:ec2", "type:feature"] },
+    "ec2-instances-feature-list": { "tags": ["scope:ec2", "type:feature"] },
+    "ec2-launch-instance-wizard-feature-shell": {
+      "tags": ["scope:ec2", "type:feature"]
+    },
+    "ec2-launch-instance-wizard-feature-ami-selection": {
+      "tags": ["scope:ec2", "type:feature"]
+    },
+    "shared-ec2-data-access-instances": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
+    "shared-ec2-domain": { "tags": ["scope:shared", "type:domain"] },
+    "svc-ec2": { "tags": [] }
   }
 }

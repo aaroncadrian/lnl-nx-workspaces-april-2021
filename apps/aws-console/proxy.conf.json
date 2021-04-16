@@ -7,5 +7,13 @@
       "^/api/vpc/subnets": "/api/subnets",
       "^/api/vpc/security-groups": "/api/security-groups"
     }
+  },
+  "/api/ec2/*": {
+    "target": "http://localhost:3334",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/ec2/instances": "/api/instances"
+    }
   }
 }

@@ -5,6 +5,8 @@ import '@awsui/global-styles/index.css';
 import { ServicesNavbar } from '@aws/shared/ui-services-navbar';
 import { Route, Switch } from 'react-router-dom';
 
+const Ec2FeatureShell = React.lazy(() => import('@aws/ec2/feature-shell'));
+
 const VpcFeatureShell = React.lazy(() => import('@aws/vpc/feature-shell'));
 
 export function AwsConsoleRoutes() {
@@ -12,6 +14,7 @@ export function AwsConsoleRoutes() {
     <React.Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route path={'/vpc'} component={VpcFeatureShell} />
+        <Route path={'/ec2'} component={Ec2FeatureShell} />
         <Route path={'/'} render={() => <div>Welcome!</div>} />
       </Switch>
     </React.Suspense>

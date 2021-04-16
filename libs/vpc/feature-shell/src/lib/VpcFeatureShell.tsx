@@ -5,6 +5,11 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import './VpcFeatureShell.module.scss';
 import { AppLayout, SideNavigation } from '@awsui/components-react';
 import { useFollowHandler } from '@aws/shared/util-routing';
+import * as ec2 from "@aws/ec2/feature-shell";
+
+
+
+
 
 const VpcSubnetsFeatureShell = React.lazy(
   () => import('@aws/vpc/subnets/feature-shell')
@@ -22,7 +27,7 @@ function VpcFeatureShellRoutes() {
   return (
     <Switch>
       <Route
-        path={`${match.path}/subnets`}
+        path={`${match.path}/subnets2`}
         component={VpcSubnetsFeatureShell}
       />
 

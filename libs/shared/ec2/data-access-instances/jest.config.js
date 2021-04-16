@@ -1,0 +1,15 @@
+module.exports = {
+  displayName: 'shared-ec2-data-access-instances',
+  preset: '../../../../jest.preset.js',
+  globals: {
+    'ts-jest': {
+      tsConfig: '<rootDir>/tsconfig.spec.json',
+    },
+  },
+  transform: {
+    '^.+\\.[tj]sx?$': 'ts-jest',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  coverageDirectory:
+    '../../../../coverage/libs/shared/ec2/data-access-instances',
+};

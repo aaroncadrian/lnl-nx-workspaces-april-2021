@@ -1,12 +1,23 @@
 {
   "version": 2,
-  "cli": { "defaultCollection": "@nrwl/react" },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
   "defaultProject": "aws-console",
   "generators": {
     "@nrwl/react": {
-      "application": { "style": "scss", "linter": "eslint", "babel": true },
-      "component": { "style": "scss" },
-      "library": { "style": "scss", "linter": "eslint" }
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     }
   },
   "projects": {
@@ -17,7 +28,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/aws-console",
             "index": "apps/aws-console/src/index.html",
@@ -28,7 +41,9 @@
               "apps/aws-console/src/favicon.ico",
               "apps/aws-console/src/assets"
             ],
-            "styles": ["apps/aws-console/src/styles.scss"],
+            "styles": [
+              "apps/aws-console/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -64,18 +79,24 @@
             "proxyConfig": "apps/aws-console/proxy.conf.json"
           },
           "configurations": {
-            "production": { "buildTarget": "aws-console:build:production" }
+            "production": {
+              "buildTarget": "aws-console:build:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/aws-console/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/aws-console/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/aws-console"],
+          "outputs": [
+            "coverage/apps/aws-console"
+          ],
           "options": {
             "jestConfig": "apps/aws-console/jest.config.js",
             "passWithNoTests": true
@@ -96,13 +117,17 @@
             "devServerTarget": "aws-console:serve"
           },
           "configurations": {
-            "production": { "devServerTarget": "aws-console:serve:production" }
+            "production": {
+              "devServerTarget": "aws-console:serve:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/aws-console-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/aws-console-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -115,12 +140,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/vpc/feature-shell/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/vpc/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/vpc/feature-shell"],
+          "outputs": [
+            "coverage/libs/vpc/feature-shell"
+          ],
           "options": {
             "jestConfig": "libs/vpc/feature-shell/jest.config.js",
             "passWithNoTests": true
@@ -143,7 +172,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/vpc/feature-dashboard"],
+          "outputs": [
+            "coverage/libs/vpc/feature-dashboard"
+          ],
           "options": {
             "jestConfig": "libs/vpc/feature-dashboard/jest.config.js",
             "passWithNoTests": true
@@ -166,7 +197,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/vpc/subnets/feature-shell"],
+          "outputs": [
+            "coverage/libs/vpc/subnets/feature-shell"
+          ],
           "options": {
             "jestConfig": "libs/vpc/subnets/feature-shell/jest.config.js",
             "passWithNoTests": true
@@ -189,7 +222,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/vpc/subnets/feature-list"],
+          "outputs": [
+            "coverage/libs/vpc/subnets/feature-list"
+          ],
           "options": {
             "jestConfig": "libs/vpc/subnets/feature-list/jest.config.js",
             "passWithNoTests": true
@@ -212,7 +247,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/vpc/subnets/feature-create"],
+          "outputs": [
+            "coverage/libs/vpc/subnets/feature-create"
+          ],
           "options": {
             "jestConfig": "libs/vpc/subnets/feature-create/jest.config.js",
             "passWithNoTests": true
@@ -228,12 +265,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/subnets/data-access/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/subnets/data-access/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/subnets/data-access"],
+          "outputs": [
+            "coverage/libs/shared/subnets/data-access"
+          ],
           "options": {
             "jestConfig": "libs/shared/subnets/data-access/jest.config.js",
             "passWithNoTests": true
@@ -256,7 +297,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-services-navbar"],
+          "outputs": [
+            "coverage/libs/shared/ui-services-navbar"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-services-navbar/jest.config.js",
             "passWithNoTests": true
@@ -272,12 +315,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/ui-routing/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/shared/ui-routing/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-routing"],
+          "outputs": [
+            "coverage/libs/shared/ui-routing"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-routing/jest.config.js",
             "passWithNoTests": true
@@ -293,12 +340,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/util-routing/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/util-routing/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/util-routing"],
+          "outputs": [
+            "coverage/libs/shared/util-routing"
+          ],
           "options": {
             "jestConfig": "libs/shared/util-routing/jest.config.js",
             "passWithNoTests": true
@@ -313,12 +364,16 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/svc-vpcs",
             "main": "apps/svc-vpcs/src/main.ts",
             "tsConfig": "apps/svc-vpcs/tsconfig.app.json",
-            "assets": ["apps/svc-vpcs/src/assets"]
+            "assets": [
+              "apps/svc-vpcs/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -336,15 +391,23 @@
         },
         "serve": {
           "executor": "@nrwl/node:execute",
-          "options": { "buildTarget": "svc-vpcs:build" }
+          "options": {
+            "buildTarget": "svc-vpcs:build"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/svc-vpcs/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": [
+              "apps/svc-vpcs/**/*.ts"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/svc-vpcs"],
+          "outputs": [
+            "coverage/apps/svc-vpcs"
+          ],
           "options": {
             "jestConfig": "apps/svc-vpcs/jest.config.js",
             "passWithNoTests": true
@@ -360,12 +423,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/subnets/domain/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/subnets/domain/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/subnets/domain"],
+          "outputs": [
+            "coverage/libs/shared/subnets/domain"
+          ],
           "options": {
             "jestConfig": "libs/shared/subnets/domain/jest.config.js",
             "passWithNoTests": true
@@ -388,7 +455,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/security-groups/feature-shell"],
+          "outputs": [
+            "coverage/libs/shared/security-groups/feature-shell"
+          ],
           "options": {
             "jestConfig": "libs/shared/security-groups/feature-shell/jest.config.js",
             "passWithNoTests": true
@@ -411,7 +480,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/security-groups/feature-list"],
+          "outputs": [
+            "coverage/libs/shared/security-groups/feature-list"
+          ],
           "options": {
             "jestConfig": "libs/shared/security-groups/feature-list/jest.config.js",
             "passWithNoTests": true
@@ -434,7 +505,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/security-groups/feature-create"],
+          "outputs": [
+            "coverage/libs/shared/security-groups/feature-create"
+          ],
           "options": {
             "jestConfig": "libs/shared/security-groups/feature-create/jest.config.js",
             "passWithNoTests": true
@@ -457,7 +530,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/security-groups/data-access"],
+          "outputs": [
+            "coverage/libs/shared/security-groups/data-access"
+          ],
           "options": {
             "jestConfig": "libs/shared/security-groups/data-access/jest.config.js",
             "passWithNoTests": true
@@ -473,14 +548,276 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/security-groups/domain/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/security-groups/domain/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/security-groups/domain"],
+          "outputs": [
+            "coverage/libs/shared/security-groups/domain"
+          ],
           "options": {
             "jestConfig": "libs/shared/security-groups/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-feature-shell": {
+      "root": "libs/ec2/feature-shell",
+      "sourceRoot": "libs/ec2/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/feature-shell"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-feature-dashboard": {
+      "root": "libs/ec2/feature-dashboard",
+      "sourceRoot": "libs/ec2/feature-dashboard/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/feature-dashboard/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/feature-dashboard"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/feature-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-instances-feature-shell": {
+      "root": "libs/ec2/instances/feature-shell",
+      "sourceRoot": "libs/ec2/instances/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/instances/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/instances/feature-shell"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/instances/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-instances-feature-list": {
+      "root": "libs/ec2/instances/feature-list",
+      "sourceRoot": "libs/ec2/instances/feature-list/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/instances/feature-list/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/instances/feature-list"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/instances/feature-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-launch-instance-wizard-feature-shell": {
+      "root": "libs/ec2/launch-instance-wizard/feature-shell",
+      "sourceRoot": "libs/ec2/launch-instance-wizard/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/launch-instance-wizard/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/launch-instance-wizard/feature-shell"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/launch-instance-wizard/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ec2-launch-instance-wizard-feature-ami-selection": {
+      "root": "libs/ec2/launch-instance-wizard/feature-ami-selection",
+      "sourceRoot": "libs/ec2/launch-instance-wizard/feature-ami-selection/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ec2/launch-instance-wizard/feature-ami-selection/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ec2/launch-instance-wizard/feature-ami-selection"
+          ],
+          "options": {
+            "jestConfig": "libs/ec2/launch-instance-wizard/feature-ami-selection/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ec2-data-access-instances": {
+      "root": "libs/shared/ec2/data-access-instances",
+      "sourceRoot": "libs/shared/ec2/data-access-instances/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ec2/data-access-instances/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ec2/data-access-instances"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ec2/data-access-instances/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ec2-domain": {
+      "root": "libs/shared/ec2/domain",
+      "sourceRoot": "libs/shared/ec2/domain/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ec2/domain/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ec2/domain"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ec2/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "svc-ec2": {
+      "root": "apps/svc-ec2",
+      "sourceRoot": "apps/svc-ec2/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/svc-ec2",
+            "main": "apps/svc-ec2/src/main.ts",
+            "tsConfig": "apps/svc-ec2/tsconfig.app.json",
+            "assets": [
+              "apps/svc-ec2/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/svc-ec2/src/environments/environment.ts",
+                  "with": "apps/svc-ec2/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "svc-ec2:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/svc-ec2/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/svc-ec2"
+          ],
+          "options": {
+            "jestConfig": "apps/svc-ec2/jest.config.js",
             "passWithNoTests": true
           }
         }
