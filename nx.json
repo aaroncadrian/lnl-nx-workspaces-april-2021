@@ -7,7 +7,7 @@
     ".eslintrc.json": "*"
   },
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "npmScope": "aws",
   "tasksRunnerOptions": {
@@ -28,12 +28,78 @@
   },
   "projects": {
     "aws-console": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": [
+        "svc-vpcs"
+      ]
     },
     "aws-console-e2e": {
       "tags": [],
       "implicitDependencies": [
         "aws-console"
+      ]
+    },
+    "vpc-feature-shell": {
+      "tags": [
+        "scope:vpc",
+        "type:feature"
+      ]
+    },
+    "vpc-feature-dashboard": {
+      "tags": [
+        "scope:vpc",
+        "type:feature"
+      ]
+    },
+    "vpc-subnets-feature-shell": {
+      "tags": [
+        "scope:vpc",
+        "type:feature"
+      ]
+    },
+    "vpc-subnets-feature-list": {
+      "tags": [
+        "scope:vpc",
+        "type:feature"
+      ]
+    },
+    "vpc-subnets-feature-create": {
+      "tags": [
+        "scope:vpc",
+        "type:feature"
+      ]
+    },
+    "shared-subnets-data-access": {
+      "tags": [
+        "scope:shared",
+        "type:data-access"
+      ]
+    },
+    "shared-ui-services-navbar": {
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
+    },
+    "shared-ui-routing": {
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
+    },
+    "shared-util-routing": {
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
+    },
+    "svc-vpcs": {
+      "tags": []
+    },
+    "shared-subnets-domain": {
+      "tags": [
+        "scope:shared",
+        "type:domain"
       ]
     }
   }

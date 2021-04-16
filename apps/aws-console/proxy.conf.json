@@ -1,0 +1,10 @@
+{
+  "/api/vpc/*": {
+    "target": "http://localhost:3333",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/vpc/subnets": "/api/subnets"
+    }
+  }
+}

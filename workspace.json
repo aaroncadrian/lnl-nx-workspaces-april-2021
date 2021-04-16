@@ -1,23 +1,12 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
+  "cli": { "defaultCollection": "@nrwl/react" },
   "defaultProject": "aws-console",
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
+      "application": { "style": "scss", "linter": "eslint", "babel": true },
+      "component": { "style": "scss" },
+      "library": { "style": "scss", "linter": "eslint" }
     }
   },
   "projects": {
@@ -71,12 +60,11 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "aws-console:build"
+            "buildTarget": "aws-console:build",
+            "proxyConfig": "apps/aws-console/proxy.conf.json"
           },
           "configurations": {
-            "production": {
-              "buildTarget": "aws-console:build:production"
-            }
+            "production": { "buildTarget": "aws-console:build:production" }
           }
         },
         "lint": {
@@ -108,15 +96,279 @@
             "devServerTarget": "aws-console:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "aws-console:serve:production"
-            }
+            "production": { "devServerTarget": "aws-console:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/aws-console-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "vpc-feature-shell": {
+      "root": "libs/vpc/feature-shell",
+      "sourceRoot": "libs/vpc/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/vpc/feature-shell/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vpc/feature-shell"],
+          "options": {
+            "jestConfig": "libs/vpc/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vpc-feature-dashboard": {
+      "root": "libs/vpc/feature-dashboard",
+      "sourceRoot": "libs/vpc/feature-dashboard/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/vpc/feature-dashboard/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vpc/feature-dashboard"],
+          "options": {
+            "jestConfig": "libs/vpc/feature-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vpc-subnets-feature-shell": {
+      "root": "libs/vpc/subnets/feature-shell",
+      "sourceRoot": "libs/vpc/subnets/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/vpc/subnets/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vpc/subnets/feature-shell"],
+          "options": {
+            "jestConfig": "libs/vpc/subnets/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vpc-subnets-feature-list": {
+      "root": "libs/vpc/subnets/feature-list",
+      "sourceRoot": "libs/vpc/subnets/feature-list/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/vpc/subnets/feature-list/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vpc/subnets/feature-list"],
+          "options": {
+            "jestConfig": "libs/vpc/subnets/feature-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vpc-subnets-feature-create": {
+      "root": "libs/vpc/subnets/feature-create",
+      "sourceRoot": "libs/vpc/subnets/feature-create/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/vpc/subnets/feature-create/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/vpc/subnets/feature-create"],
+          "options": {
+            "jestConfig": "libs/vpc/subnets/feature-create/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-subnets-data-access": {
+      "root": "libs/shared/subnets/data-access",
+      "sourceRoot": "libs/shared/subnets/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/subnets/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/subnets/data-access"],
+          "options": {
+            "jestConfig": "libs/shared/subnets/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-services-navbar": {
+      "root": "libs/shared/ui-services-navbar",
+      "sourceRoot": "libs/shared/ui-services-navbar/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-services-navbar/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui-services-navbar"],
+          "options": {
+            "jestConfig": "libs/shared/ui-services-navbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-routing": {
+      "root": "libs/shared/ui-routing",
+      "sourceRoot": "libs/shared/ui-routing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/ui-routing/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui-routing"],
+          "options": {
+            "jestConfig": "libs/shared/ui-routing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-util-routing": {
+      "root": "libs/shared/util-routing",
+      "sourceRoot": "libs/shared/util-routing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/util-routing/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/util-routing"],
+          "options": {
+            "jestConfig": "libs/shared/util-routing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "svc-vpcs": {
+      "root": "apps/svc-vpcs",
+      "sourceRoot": "apps/svc-vpcs/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/svc-vpcs",
+            "main": "apps/svc-vpcs/src/main.ts",
+            "tsConfig": "apps/svc-vpcs/tsconfig.app.json",
+            "assets": ["apps/svc-vpcs/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/svc-vpcs/src/environments/environment.ts",
+                  "with": "apps/svc-vpcs/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": { "buildTarget": "svc-vpcs:build" }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["apps/svc-vpcs/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/svc-vpcs"],
+          "options": {
+            "jestConfig": "apps/svc-vpcs/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-subnets-domain": {
+      "root": "libs/shared/subnets/domain",
+      "sourceRoot": "libs/shared/subnets/domain/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/subnets/domain/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/subnets/domain"],
+          "options": {
+            "jestConfig": "libs/shared/subnets/domain/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -14,7 +14,28 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@aws/vpc/feature-shell": ["libs/vpc/feature-shell/src/index.ts"],
+      "@aws/vpc/feature-dashboard": ["libs/vpc/feature-dashboard/src/index.ts"],
+      "@aws/vpc/subnets/feature-shell": [
+        "libs/vpc/subnets/feature-shell/src/index.ts"
+      ],
+      "@aws/vpc/subnets/feature-list": [
+        "libs/vpc/subnets/feature-list/src/index.ts"
+      ],
+      "@aws/vpc/subnets/feature-create": [
+        "libs/vpc/subnets/feature-create/src/index.ts"
+      ],
+      "@aws/shared/subnets/data-access": [
+        "libs/shared/subnets/data-access/src/index.ts"
+      ],
+      "@aws/shared/ui-services-navbar": [
+        "libs/shared/ui-services-navbar/src/index.ts"
+      ],
+      "@aws/shared/ui-routing": ["libs/shared/ui-routing/src/index.ts"],
+      "@aws/shared/util-routing": ["libs/shared/util-routing/src/index.ts"],
+      "@aws/shared/subnets/domain": ["libs/shared/subnets/domain/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
